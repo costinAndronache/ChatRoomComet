@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    title= "pageTitle"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 Welcome to our basic Chat, Here we have a few chat rooms:
+    ul
+      li
+        div HardwareRoom
+          form(name="HardWareRooM",action='/HardWareRoom',METHOD='post')
+            button(onclick='myfunction()',type='submit') Enter
+            input(type='hidden',id='sendingNickname', name='nickname', value= '')
+      li
+        div SoftwareRoom
+          form(name="SoftWareRoom",action='/SoftWareRoom',METHOD='post')
+            button(onclick='myfunction()',type='submit') Enter
+            input(type='hidden',id='sendingNickname1', name='nickname', value= '')
+
+  script.
+    function myfunction() {
+      do {
+        var nickname = prompt("Please enter your name", "Harry Potter");
+      }while(nickname=="");
+      document.getElementById('sendingNickname').value = nickname;
+      document.getElementById('sendingNickname1').value = nickname;
+    }

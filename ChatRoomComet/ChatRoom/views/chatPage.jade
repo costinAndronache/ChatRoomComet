@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        title
+        link(rel='stylesheet', href='/stylesheets/Room.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src='/cometClient/LongPooling.js')
+    body
+        title
+        h1 Welcome the #{roomAdress} and #{username}
+        div(id="wrapper")
+            div(id="chatbox")
+            form(name="message", action="")
+                input(name="usrmsg", type="text", id="usrmsg", size="63")
+                input(name="submitmsg", type="submit",  id="submitmsg", value="Send")
+        div(id="divCheckbox",style="display: none")
+            h1(id="username")
+                !{username}
+            h1(id="roomName")
+                !{roomAdress}

@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    head
+        title
+        link(rel='stylesheet', href='/stylesheets/Room.css')
+    body
+        title
+        h1 Welcome the #{title} and #{username}
+        div(id="wrapper")
+            div(id="chatbox")
+            form(name="message", action="")
+                input(name="usrmsg", type="text", id="usrmsg", size="63")
+                input(name="submitmsg", type="submit",  id="submitmsg", value="Send")
